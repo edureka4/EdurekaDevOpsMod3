@@ -1,0 +1,101 @@
+  621  mkdir mod3
+  622  cd mod3
+  623  git init
+  624  vi home.html
+  625  git add .
+  626  git commit -m "Added Home page"
+  627  git log --oneline
+  628  git branch contact
+  629  git branch
+  630  git checkout contact
+  631  ls
+  632  vi contact.html
+  633  git add .
+  634  git commit -m " Added Email in contact page"
+  635  git checkout master
+  636  git branch issue
+  637  git branch
+  638  git git checkout issue
+  639  git checkout issue
+  640  ls
+  641  vi home.html
+  642  git add .
+  643  git commit -m "Fixed issue 11"
+  644  git checkout master
+  645  ls
+  646  vi home.html
+  647  git log --oneline --graph
+  648  git merge issue
+  649  git log --oneline --graph
+  650  git merge contact
+  651  git log --oneline --graph
+  652  git branch -d contact issue
+  653  git log --oneline --graph
+  654  git branch search
+  655  git branch redesign
+       git branch aboutme
+  680  git checkout aboutme
+  688  vi aboutme.html
+  689  vi home.html
+  690  git status
+  691  git add .
+  692  git commit -m "Added about me page with links"
+  693  git checkout redesign
+  694  vi home.html
+  695  git add .
+  696  git commit -m "Redesigned home page"
+  697  git checkout master
+  698  git merge redesign
+  700  vi home.html
+  701  git log --oneline --graph
+  702  git branch -d redesign
+  703  git checkout aboutme
+  704  ls
+  705  git log --oneline
+  706  git checkout master
+  707  git merge aboutme
+  708  git mergetool
+  757  ls
+  758  git status
+  759  git commit -am "Merged conflicts"
+  760  git log --oneline
+  765  git checkout search
+  766  vi search.html
+  767  git add .
+  768  git commit -m "Added search page"
+  769  git log --oneline
+  771  git rebase master
+  772  git log --oneline
+  777  git checkout master
+  778  git merge search
+  781  git branch -d search 
+  879  git checkout -b sale
+  880  vi sale.html
+  881  git checkout master
+  882  ls
+  883  git checkout sale
+  884  ls
+  885  git stash save -u "Sale.html"
+  886  git stash list
+  887  git checkout master
+  888  ls
+  889  git checkout -b copyright
+  890  vi home.html
+  891  git add .
+  892  git commit -m "Added copyright"
+  893  git checkout master
+  894  git merge copyright
+  895  git checkout sale
+  896  ls
+  897  git stash apply
+  898  vi sale.html
+  899  git add.
+  900  git add .
+  901  git commit -m "Added Sales page"
+  902  git checkout master
+  903  git merge sale
+  904  git log --oneline
+  905  git branch -d sale copyright
+    	
+  
+
