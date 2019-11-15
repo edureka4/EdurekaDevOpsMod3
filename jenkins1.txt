@@ -1,0 +1,29 @@
+1  cd ~
+2  clear
+3  sudo apt-get update
+4  sudo apt-get install openjdk-8-jdk
+6  java -version
+7  wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+8  sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+9  sudo apt-get update
+10  sudo apt-get install jenkins
+11  sudo systemctl start jenkins
+12  sudo systemctl status jenkins
+13  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+# in user demo
+14  export M2_HOME=/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/M3
+15  export M2=$M2_HOME/bin
+16  export PATH=$M2:$PATH
+17  mvn --version
+978 mvn archetype generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+979 sudo mvn archetype generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+980 mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+981 ls
+982 sudo apt-get install tree
+983 tree
+984 cd my-app
+985 mvn package
+986 tree
+987 java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
+
+
